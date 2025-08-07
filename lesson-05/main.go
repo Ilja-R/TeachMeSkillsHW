@@ -65,7 +65,7 @@ func printResult(result int) {
 	case result >= 1:
 		fmt.Println("The result is average")
 	default:
-		fmt.Println("The result is small")
+		fmt.Println("The result is small or zero")
 	}
 }
 
