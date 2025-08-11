@@ -58,7 +58,7 @@ func divide(a, b int) (int, error) {
 }
 
 func printResult(result int) {
-	fmt.Printf("Result of whole number division is : %d\n", result)
+	fmt.Printf("Result of whole number division is: %d\n", result)
 	switch {
 	case result > 10:
 		fmt.Println("The result is big")
