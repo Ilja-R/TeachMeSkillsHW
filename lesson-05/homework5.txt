@@ -1,0 +1,34 @@
+Assignment:
+Write a program, which:
+1. Prompts user for two integers
+2. Checks input
+3. Uses function divide(a, b int) (int, error) which returns integer division or error, if divisor is 0
+4. Print the result or an error
+5. Based on the result:
+* if result is over 10, print "The result is big"
+* if result is between 1 and 10, print "The result is average"
+* else print "The result is small or zero"
+6. Use switch for part 5
+7. In a loop ask user if he wants to continue
+8. Use break for exit
+
+Original:
+Домашнее задание
+Напишите программу, которая:
+1. Запрашивает у пользователя два целых числа (через fmt.Scanln).
+2. Проверяет, что введённые значения корректны (обрабатывает ошибку ввода).
+3. Реализует функцию divide(a, b int) (int, error), которая возвращает результат деления a / b
+или ошибку, если делить на ноль нельзя.
+4. Выводит результат деления, либо сообщение об ошибке.
+5. В зависимости от результата:
+• Если частное больше 10, выводит “Результат большой”
+.
+• Если частное от 1 до 10, выводит “Результат средний”
+.
+• Иначе —
+“Результат маленький или ноль”
+.
+6. Использует switch для выбора сообщения в пункте 5.
+7. Циклом for спрашивает пользователя, хочет ли он повторить операцию (вводить новые
+числа).
+8. Для выхода из цикла используется break.
