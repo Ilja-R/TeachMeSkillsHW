@@ -1,0 +1,34 @@
+Assignment:
+1. Functions
+• Write a function that takes two numbers and returns their sum.
+• Create a function with multiple return values: the result of division and the remainder.
+• Implement a function that takes another function as an argument and calls it.
+2. Arrays and Slices
+• Create an array of 5 integers and display them on the screen.
+• Write a function that takes a slice and returns its copy with elements doubled.
+• Implement the merging of two slices using append.
+3. Maps
+• Create a map[string]int to store people’s ages by name and display the data.
+• Implement a function that counts the number of occurrences of each word in a slice of strings.
+• Remove a key from the map and check for its existence.
+4. Structures and Methods
+• Define a Person structure with fields Name and Salary.
+
+Original:
+1. Функции
+• Напишите функцию, которая принимает два числа и возвращает их сумму.
+• Создайте функцию с несколькими возвращаемыми значениями: результат деления и
+остаток.
+• Реализуйте функцию, которая принимает функцию как аргумент и вызывает её.
+2. Массивы и срезы
+• Создайте массив из 5 целых чисел и выведите их на экран.
+• Напишите функцию, которая принимает срез и возвращает его копию с удвоенными
+элементами.
+• Реализуйте объединение двух срезов с помощью append.
+3. Карты (map)
+• Создайте map[string]int для хранения возраста людей по имени и выведите данные.
+• Реализуйте функцию, которая подсчитывает количество вхождений каждого слова в
+срезе строк.
+• Удалите ключ из карты и проверьте его наличие.
+4. Структуры и методы
+• Определите структуру Person с полями Name и Salary.

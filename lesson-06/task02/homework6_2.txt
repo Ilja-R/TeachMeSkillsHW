@@ -1,0 +1,43 @@
+Assignment:
+1. Structures and Methods
+• Create a structure Employee with fields: Name (string), Age (int), Position (string), Salary (float64).
+• Add a method Info() that returns a string containing the employee’s data.
+2. Arrays and Slices
+• Store the list of employees in a slice \[]Employee.
+• Implement a function that adds a new employee to the slice.
+3. Map
+•  Create a map\[string]float64, where the key is the position and the value is the average salary.
+•  Implement a function that updates this map based on the slice of employees.
+4. Interfaces
+• Create an interface Printable with the method Print().
+• Implement this interface for the Employee structure (the method should print information about the employee).
+5. Functions
+• Write a function to search for an employee by name (returns Employee and an error if not found).
+• Implement a function that calculates the average age of all employees.
+6. Using All the Code
+• In main(), create several employees.
+• Add them to the slice.
+• Display all employees using the Print() method.
+• Calculate and display the average age and the average salary by position.
+
+Original:
+1. Структуры и методы
+• Создайте структуру Employee с полями: Name (string), Age (int), Position (string), Salary (float64).
+• Добавьте метод Info(), который возвращает строку с данными о сотруднике.
+2. Массивы и срезы
+• Храните список сотрудников в срезе []Employee.
+• Реализуйте функцию, которая добавляет нового сотрудника в срез.
+3. Map
+• Создайте map[string]float64, где ключ — должность, значение — средняя зарплата.
+• Реализуйте функцию, которая обновляет данные этой карты на основе среза сотрудников.
+4. Интерфейсы
+• Создайте интерфейс Printable с методом Print().
+• Реализуйте этот интерфейс для структуры Employee (метод должен печатать информацию о сотруднике).
+5. Функции
+• Напишите функцию поиска сотрудника по имени (возвращает Employee и ошибку, если не найден).
+• Реализуйте функцию, которая считает средний возраст всех сотрудников.
+6. Использование всего кода
+• В main() создайте несколько сотрудников.
+• Добавьте их в срез.
+• Выведите всех сотрудников через метод Print().
+• Посчитайте и выведите средний возраст и среднюю зарплату по должностям.
