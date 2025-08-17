@@ -16,7 +16,7 @@ func main() {
 
 	a = 35
 	b = 4
-	result, remainder, err := returnDivision(a, b)
+	result, remainder, err := divideWithRemainder(a, b)
 	if err != nil {
 		fmt.Printf("Error: %s\n", err)
 	} else {
@@ -26,7 +26,7 @@ func main() {
 
 	a = 60
 	b = 0
-	result, remainder, err = returnDivision(a, b)
+	result, remainder, err = divideWithRemainder(a, b)
 	if err != nil {
 		fmt.Printf("Result of division of %d by %d is error: %s\n", a, b, err)
 	} else {
@@ -92,7 +92,7 @@ func calculateSum(a int, b int) int {
 	return a + b
 }
 
-func returnDivision(a int, b int) (result int, remainder int, err error) {
+func divideWithRemainder(a int, b int) (result int, remainder int, err error) {
 	if b == 0 {
 		return 0, 0, errors.New("division by zero")
 	}
