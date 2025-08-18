@@ -98,7 +98,7 @@ func (c *Company) SearchByName(name string) (Employee, error) {
 			return emp, nil
 		}
 	}
-	return Employee{}, errors.New("employee " + name + "not found in the company")
+	return Employee{}, errors.New("employee " + name + " not found in the company")
 }
 
 func (c *Company) CalculateAverageAge() float64 {
