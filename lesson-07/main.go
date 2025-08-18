@@ -31,18 +31,15 @@ func main() {
 
 	fmt.Println("Average age of employees in the company:", strconv.FormatFloat(company.CalculateAverageAge(), 'f', 2, 64))
 
-	employee, err := company.SearchByName("Alice")
-	if err != nil {
-		fmt.Println("Error", err)
-	} else {
-		fmt.Println("Found employee:", employee.Info())
-	}
+	toSearch := []string{"Alice", "Bob", "Charles", "David", "Eve", "Frank", "George", ""}
 
-	employee2, err2 := company.SearchByName("FooBar")
-	if err2 != nil {
-		fmt.Println("Error", err2)
-	} else {
-		fmt.Println("Found employee:", employee2.Info())
+	for _, name := range toSearch {
+		emp, err := company.SearchByName(name)
+		if err != nil {
+			fmt.Println("Error:", err)
+			continue
+		}
+		fmt.Println("Found employee:", emp.Info())
 	}
 
 	report := company.GeneratePositionSalaryReport()
@@ -93,6 +90,9 @@ func (c *Company) AddEmployee(e Employee) {
 
 func (c *Company) SearchByName(name string) (Employee, error) {
 	// This method returns the FIRST found employee with the given name or an error if not found
+	if name == "" {
+		return Employee{}, errors.New("employee name cannot be empty")
+	}
 	for _, emp := range c.Employees {
 		if emp.Name == name {
 			return emp, nil
