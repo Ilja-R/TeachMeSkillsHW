@@ -1,0 +1,28 @@
+Assignment:
+1. Printing numbers in two goroutines
+Task:
+Create two goroutines:
+• the first prints even numbers from 0 to 10,
+• the second prints odd numbers from 1 to 9.
+2. Parallel file loading
+Task:
+Simulate file downloads with different delays in goroutines:
+• file1 takes 1 second,
+• file2 takes 2 seconds,
+• file3 takes 500 milliseconds.
+Print a message fileX loaded after each download. Use time.Sleep and sync.WaitGroup.
+
+Original:
+1. Печать чисел в двух горутинах
+Задача:
+Создайте две горутины:
+• первая печатает чётные числа от 0 до 10,
+• вторая — нечётные числа от 1 до 9.
+2. Параллельная загрузка
+Задача:
+Симулируйте загрузку файлов с разной задержкой в горутинах:
+• file1 загружается 1 секунду,
+• file2 — 2 секунды,
+• file3 — 500 миллисекунд.
+Выведите сообщение fileX loaded после каждой загрузки. Используйте time.Sleep и
+sync.WaitGroup.
