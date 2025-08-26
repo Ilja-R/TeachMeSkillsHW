@@ -52,8 +52,6 @@ func loadLibrary(path string) (*Library, error) {
 	return &library, nil
 }
 
-func loadUsers(path string) ([]User, error) {
-
 	data, err := os.ReadFile(path)
 	if err != nil {
 		return nil, err
