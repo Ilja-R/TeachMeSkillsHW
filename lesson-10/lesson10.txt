@@ -1,0 +1,103 @@
+Assignment:
+Practical Task 1: JSON
+Task:
+Write a console program that:
+1. Reads a JSON file users.json containing an array of users:
+[
+    {
+        "name": "Alice",
+        "age": 30
+    },
+    {
+        "name": "Bob",
+        "age": 25
+    }
+]
+2. Parses the data into a slice of structures:
+type User struct {
+    Name string `json:"name"`
+    Age int     `json:"age"`
+}
+3. Increases the age of each user by 1 year.
+4. And outputs the result to the console.
+Goal:
+— Practice with json.Unmarshal, json.Marshal, reading and writing files.
+
+Practical Task 2: XML
+Task:
+Write a console program that:
+1. Reads an XML file books.xml with the following structure:
+<library>
+    <book>
+        <title>Go in Action</title>
+        <year>2016</year>
+    </book>
+    <book>
+        <title>Introducing Go</title>
+        <year>2015</year>
+    </book>
+</library>
+2. Parses the XML into structures:
+type Book struct {
+    Title string `xml:"title"`
+    Year  int    `xml:"year"`
+}
+type Library struct {
+    Books []Book `xml:"book"`
+}
+3. Increases the publication year of each book by 1.
+4. And outputs the result to the console.
+Goal:
+— Reinforce working with encoding/xml, nested structures, and files.
+
+Практическое задание 1: JSON
+Задание:
+Напишите консольную программу, которая:
+1. Считывает JSON-файл users.json, содержащий массив пользователей:
+[
+    {
+        "name": "Alice",
+        "age": 30
+    },
+    {
+        "name": "Bob",
+        "age": 25
+    }
+]
+2. Парсит данные в срез структур:
+type User struct {
+    Name string `json:"name"`
+    Age int     `json:"age"`
+}
+3. Увеличивает возраст каждого пользователя на 1 год.
+4. И выводит результат на консоль
+Цель:
+— Попрактиковаться в json.Unmarshal, json.Marshal, чтении и записи файлов.
+
+Практическое задание 2: XML
+Задание:
+Напишите консольную программу, которая:
+1. Считывает XML-файл books.xml следующей структуры:
+<library>
+    <book>
+        <title>Go in Action</title>
+        <year>2016</year>
+    </book>
+    <book>
+        <title>Introducing Go</title>
+        <year>2015</year>
+    </book>
+</library>
+2. Парсит XML в структуры:
+type Book struct {
+	Title string `xml:"title"`
+	Year  int    `xml:"year"`
+}
+
+type Library struct {
+	Books []Book `xml:"book"`
+}
+3. Увеличивает год публикации каждой книги на 1.
+4. И выводит результат на консоль.
+Цель:
+— Закрепить работу с encoding/xml, вложенными структурами и файлами.

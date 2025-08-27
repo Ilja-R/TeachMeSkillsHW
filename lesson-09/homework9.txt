@@ -1,0 +1,51 @@
+Assignment:
+1. Channels
+• Implement a program where one goroutine sends numbers into a channel, and another reads and prints them.
+• Add a buffered channel and compare the behavior with an unbuffered one.
+2. Select statement
+• Write an example where data from two channels is processed using select.
+• Add a timeout using time.After so that the program doesn’t wait indefinitely.
+3. Timers and timeouts
+• Implement a function that performs a “long” operation and is interrupted using time.After.
+• Use time.NewTimer to control when the work stops.
+4. Asynchronous data retrieval
+• Create a goroutine that simulates data loading (e.g., with time.Sleep) and returns the result through a channel.
+• Write a function that collects results from multiple goroutines.
+5. Context package
+• Implement a function with context.WithTimeout that interrupts the execution of an operation.
+• Create an example with context.WithCancel, where cancellation is triggered manually.
+6. Worker Pool
+• Write a pool of 3 workers that process tasks (e.g., multiplying a number by 2).
+• Implement a task queue using a channel.
+7. Synchronization
+• Use sync.WaitGroup to wait for 5 goroutines to finish.
+• Compare the use of sync.Mutex and sync/atomic for protecting a shared variable.
+8. Race condition
+• Implement an example where a global variable is incremented concurrently without synchronization.
+• Try to fix the problem using Mutex or atomic.
+
+Original:
+1. Каналы
+• Реализуйте программу, где одна горутина отправляет числа в канал, а другая их читает и выводит.
+• Добавьте буферизированный канал и сравните поведение с небуферизированным.
+2. Оператор select
+• Напишите пример, где обрабатываются данные из двух каналов с помощью select.
+• Добавьте таймаут через time.After, чтобы программа не ждала бесконечно.
+3. Таймеры и таймауты
+• Реализуйте функцию, которая выполняет «долгую» операцию и прерывается через time.After.
+• Используйте time.NewTimer для контроля завершения работы.
+4. Асинхронное получение данных
+• Создайте горутину, которая эмулирует загрузку данных (например, time.Sleep), и возвращает результат через канал.
+• Напишите функцию, которая собирает результаты из нескольких горутин.
+5. Пакет context
+• Реализуйте функцию с context.WithTimeout, которая прерывает выполнение операции.
+• Сделайте пример с context.WithCancel, где отмена запускается вручную.
+6. Worker Pool
+• Напишите пул из 3 воркеров, которые обрабатывают задачи (например, умножение числа на 2).
+• Реализуйте очередь задач через канал.
+7. Синхронизация
+• Используйте sync.WaitGroup, чтобы дождаться выполнения 5 горутин.
+• Сравните работу с использованием sync.Mutex и sync/atomic для защиты общей переменной.
+8. Race condition
+• Реализуйте пример с одновременным увеличением глобальной переменной без синхронизации.
+• Попробуйте исправить проблему с помощью Mutex или atomic.
