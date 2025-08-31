@@ -1,0 +1,33 @@
+Task:
+Extend the Gin service with the following logic:
+1. The POST /divide handler accepts JSON:
+{
+  "a": 10,
+  "b": 2
+}
+2. Performs the division a / b and returns the result:
+{
+  "result": 5
+}
+3. If b == 0, return an error:
+{
+  "error": "division by zero"
+}
+
+Задание:
+Дополните сервис на Gin следующей логикой:
+1. Обработчик POST /divide принимает JSON:
+{
+  "a": 10,
+  "b": 2
+}
+2.
+Выполняет деление a / b и возвращает результат:
+{
+  "result": 5
+}
+3.
+Если b == 0, возвращает ошибку:
+{
+  "error": "деление на ноль"
+}

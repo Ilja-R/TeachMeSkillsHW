@@ -1,0 +1,35 @@
+Task:
+Implement a simple JSON API server that:
+1. Accepts a POST request to /greet with a body:
+{
+  "name": "Alice"
+}
+2. Responds with a JSON reply:
+{
+  "message": "Hello, Alice!"
+}
+Hint:
+* Use json.NewDecoder(r.Body).Decode(...) to read the request body;
+* Use json.NewEncoder(w).Encode(...) to write the response;
+* Set Content-Type: application/json.
+Goal:
+* Practice working with JSON and structs;
+* Handle a request and generate a correct response.
+
+Задание:
+Реализуйте простой JSON API-сервер, который:
+1. Принимает POST-запрос на /greet с телом:
+{
+  "name": "Alice"
+}
+2. Отвечает JSON-ответом:
+{
+  "message": "Привет, Alice!"
+}
+Подсказка:
+ • Используйте json.NewDecoder(r.Body).Decode(...) для чтения;
+ • Используйте json.NewEncoder(w).Encode(...) для ответа;
+ • Установите Content-Type: application/json.
+Цель:
+ • Практика работы с JSON и структурами;
+ • Обработка запроса и формирование корректного ответа.

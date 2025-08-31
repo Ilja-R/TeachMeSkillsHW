@@ -1,0 +1,23 @@
+Task:
+Create a web service using Gin that:
+1. Handles GET /hello;
+2. Reads the query parameter name;
+3. Returns a JSON greeting.
+Example request:
+GET /hello?name=Alice
+Example response:
+{
+  "message": "Hello, Alice!"
+}
+
+Задание:
+Создайте веб-сервис на Gin, который:
+1. Обрабатывает GET /hello;
+2. Читает query-параметр name;
+3. Возвращает JSON с приветствием.
+Пример запроса:
+GET /hello?name=Alice
+Пример ответа:
+{
+  "message": "Привет, Alice!"
+}
