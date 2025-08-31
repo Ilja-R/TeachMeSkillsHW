@@ -1,0 +1,25 @@
+Task:
+Write an HTTP server using net/http that:
+1. Handles a POST request at /echo;
+2. Reads the request body;
+3. Sends it back to the client unchanged.
+Example behavior:
+Request:
+POST /echo
+Content-Type: text/plain
+Hello, server!
+Response:
+Hello, server!
+
+Задание:
+Напишите HTTP-сервер на net/http, который:
+1. Обрабатывает POST-запрос на /echo;
+2. Читает тело запроса;
+3. Возвращает его обратно клиенту без изменений.
+Пример поведения:
+Запрос:
+POST /echo
+Content-Type: text/plain
+Привет, сервер!
+Ответ:
+Привет, сервер!
