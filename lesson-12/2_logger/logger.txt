@@ -1,0 +1,27 @@
+Task:
+Write a program that:
+1. Creates a file app.log (if it does not already exist).
+2. Logs all incoming strings from the console into this file.
+3. Adds a timestamp to each line.
+4. Stops execution when the user enters exit.
+Goal:
+Practice working with files, logging, and standard input.
+Hints:
+• bufio.NewScanner(os.Stdin) — read input.
+• log.SetOutput(file) — log to a file.
+• log.SetFlags(log.LstdFlags) — add date and time.
+• Check for file existence with os.Stat, create with os.Create or os.OpenFile.
+
+Задание:
+Напишите программу, которая:
+1. Создаёт файл app.log (если не существует).
+2. Логирует все входящие строки из консоли в этот файл.
+3. Каждую строку сопровождает временной меткой.
+4. При вводе exit — завершает работу.
+Цель:
+Освоить работу с файлами, логированием и стандартным вводом.
+Подсказки:
+• bufio.NewScanner(os.Stdin) — считывание ввода.
+• log.SetOutput(file) — логирование в файл.
+• log.SetFlags(log.LstdFlags) — добавить дату и время.
+• Проверяйте наличие файла через os.Stat, создавайте через os.Create или os.OpenFile.
