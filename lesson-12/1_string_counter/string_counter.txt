@@ -1,0 +1,37 @@
+Task:
+Write a console program that:
+1. Reads text from a file input.txt.
+2. Removes extra spaces and line breaks.
+3. Converts the text to lowercase.
+4. Counts the frequency of each word.
+5. Saves the result to a file output.csv in the format:
+word,frequency
+go,5
+is,3
+awesome,2
+Goal:
+Practice working with strings, files, strings, bufio, os, csv.
+Hints:
+• strings.Fields — splits text into words.
+• strings.ToLower, strings.TrimSpace.
+• map[string]int — for counting words.
+• encoding/csv — for writing CSV.
+
+Задание:
+Напишите консольную программу, которая:
+1. Считывает текст из файла input.txt.
+2. Удаляет лишние пробелы и переносы строк.
+3. Приводит текст к нижнему регистру.
+4. Считает частоту каждого слова.
+5. Сохраняет результат в файл output.csv в формате:
+слово,частота
+go,5
+is,3
+awesome,2
+Цель:
+Закрепить работу со строками, файлами, strings, bufio, os, csv.
+Подсказки:
+• strings.Fields — разбивает текст на слова.
+• strings.ToLower, strings.TrimSpace
+• map[string]int — для подсчёта слов.
+• encoding/csv — для записи CSV.

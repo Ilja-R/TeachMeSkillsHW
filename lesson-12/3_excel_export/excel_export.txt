@@ -1,0 +1,59 @@
+Task:
+Create a program that:
+1. Loads a JSON file users.json of the form:
+[
+    {
+        "name": "Alice",
+        "age": 25
+    },
+    {
+        "name": "Bob",
+        "age": 30
+    }
+]
+2. Parses it into structures:
+type User struct {
+    Name string `json:"name"`
+    Age  int    `json:"age"`
+}
+3. Writes the data into an Excel file report.xlsx:
+• Columns: Name, Age
+• The first row should contain the headers
+Goal:
+Practice working with JSON and the excelize library.
+Hints:
+• Use the encoding/json package to read JSON.
+• Use the library github.com/xuri/excelize/v2:
+• f := excelize.NewFile()
+• f.SetCellValue(sheet, "A2", value)
+• f.SaveAs("report.xlsx")
+
+Задание:
+Создайте программу, которая:
+1. Загружает JSON‑файл users.json вида:
+[
+    {
+        "name": "Alice",
+        "age": 25
+    },
+    {
+        "name": "Bob",
+        "age": 30
+    }
+]
+2. Парсит в структуры:
+type User struct {
+    Name string `json:"name"`
+    Age int     `json:"age"`
+}
+3. Записывает данные в Excel‑файл report.xlsx:
+• Столбцы: Name, Age
+• Первый ряд — заголовки
+Цель:
+Закрепить работу с JSON и библиотекой excelize.
+Подсказки:
+• Используйте пакет encoding/json для чтения JSON.
+• Библиотека github.com/xuri/excelize/v2:
+• f := excelize.NewFile()
+• f.SetCellValue(sheet, "A2", value)
+• f.SaveAs("report.xlsx")
