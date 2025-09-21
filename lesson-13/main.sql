@@ -8,6 +8,8 @@ CREATE TABLE IF NOT EXISTS users
     PRIMARY KEY (id)
 );
 
+DROP TABLE users;
+
 CREATE TABLE cars
 (
     id      SERIAL,
@@ -27,6 +29,19 @@ CREATE TABLE orders
     created_at TIMESTAMP NOT NULL DEFAULT NOW(),
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users (id)
+);
+
+CREATE DATABASE online_shop_db;
+
+\c online_shop_db
+
+CREATE TABLE IF NOT EXISTS users
+(
+    id    SERIAL,
+    name  VARCHAR        NOT NULL,
+    email VARCHAR UNIQUE NOT NULL,
+    age   INT            NOT NULL,
+    PRIMARY KEY (id)
 );
 
 DROP TABLE users;
