@@ -5,10 +5,10 @@ import (
 	"github.com/Ilja-R/TeachMeSkillsHW/project-1/internal/models"
 )
 
-type UsersServiceI interface {
-	GetAllUsers(ctx context.Context) (users []models.User, err error)
-	GetUserByID(ctx context.Context, id int) (user models.User, err error)
-	CreateUser(ctx context.Context, user models.User) (err error)
-	UpdateUserByID(ctx context.Context, user models.User) (err error)
-	DeleteUserByID(ctx context.Context, id int) (err error)
+type EmployeeServiceI interface {
+	GetAllEmployees(ctx context.Context) (employees []models.Employee, err error)
+	GetEmployeeByID(ctx context.Context, id int) (employee models.Employee, err error)
+	CreateEmployee(ctx context.Context, employee models.Employee) (err error)
+	UpdateEmployeeByID(ctx context.Context, employee models.Employee) (err error)
+	DeleteEmployeeByID(ctx context.Context, id int) (err error)
 }

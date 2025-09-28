@@ -13,11 +13,11 @@ func (ctrl *Controller) RegisterEndpoints() {
 	ctrl.router.GET("/ping", ctrl.Ping)
 	ctrl.router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
-	ctrl.router.GET("/users", ctrl.GetAllUsers)
-	ctrl.router.GET("/users/:id", ctrl.GetUserByID)
-	ctrl.router.POST("/users", ctrl.CreateUser)
-	ctrl.router.PUT("/users/:id", ctrl.UpdateUserByID)
-	ctrl.router.DELETE("/users/:id", ctrl.DeleteUserByID)
+	ctrl.router.GET("/employees", ctrl.GetAllEmployees)
+	ctrl.router.GET("/employees/:id", ctrl.GetEmployeeByID)
+	ctrl.router.POST("/employees", ctrl.CreateEmployee)
+	ctrl.router.PUT("/employees/:id", ctrl.UpdateEmployeeByID)
+	ctrl.router.DELETE("/employees/:id", ctrl.DeleteEmployeeByID)
 }
 
 func (ctrl *Controller) Ping(c *gin.Context) {

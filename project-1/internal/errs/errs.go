@@ -9,8 +9,8 @@ var (
 	ErrInvalidFieldValue  = errors.New("invalid field value")
 )
 
-// User specific error
+// Employee specific error
 var (
-	ErrUserNotfound  = errors.New("user not found")
-	ErrInvalidUserID = errors.New("invalid user id")
+	ErrEmployeeNotfound  = errors.New("employee not found")
+	ErrInvalidEmployeeID = errors.New("invalid employee id")
 )

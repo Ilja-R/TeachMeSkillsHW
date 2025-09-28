@@ -19,23 +19,70 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/users": {
-            "get": {
-                "description": "Get all users or throw an error",
+        "/employee/{id}": {
+            "delete": {
+                "description": "Delete employee by ID or throw an error",
                 "produces": [
                     "application/json"
                 ],
                 "tags": [
-                    "Users"
+                    "Employees"
                 ],
-                "summary": "Get all users",
+                "summary": "Delete employee by ID",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "employee id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/controller.CommonResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/controller.CommonError"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/controller.CommonError"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/controller.CommonError"
+                        }
+                    }
+                }
+            }
+        },
+        "/employees": {
+            "get": {
+                "description": "Get all employees or throw an error",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Employees"
+                ],
+                "summary": "Get all employees",
                 "responses": {
                     "200": {
                         "description": "OK",
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/models.User"
+                                "$ref": "#/definitions/models.Employee"
                             }
                         }
                     },
@@ -48,22 +95,22 @@ const docTemplate = `{
                 }
             },
             "post": {
-                "description": "Add new user or throw an error",
+                "description": "Add new employee or throw an error",
                 "produces": [
                     "application/json"
                 ],
                 "tags": [
-                    "Users"
+                    "Employees"
                 ],
-                "summary": "Add new user",
+                "summary": "Add new employee",
                 "parameters": [
                     {
-                        "description": "new user info",
+                        "description": "new employee info",
                         "name": "request_body",
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.UserCreateRequest"
+                            "$ref": "#/definitions/dto.EmployeeCreateRequest"
                         }
                     }
                 ],
@@ -95,20 +142,20 @@ const docTemplate = `{
                 }
             }
         },
-        "/users/{id}": {
+        "/employees/{id}": {
             "get": {
-                "description": "Get user by ID or throw an error",
+                "description": "Get employee by ID or throw an error",
                 "produces": [
                     "application/json"
                 ],
                 "tags": [
-                    "Users"
+                    "Employees"
                 ],
-                "summary": "Get user by ID",
+                "summary": "Get employee by ID",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "id of user",
+                        "description": "id of employee",
                         "name": "id",
                         "in": "path",
                         "required": true
@@ -118,7 +165,7 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/models.User"
+                            "$ref": "#/definitions/models.Employee"
                         }
                     },
                     "400": {
@@ -142,29 +189,29 @@ const docTemplate = `{
                 }
             },
             "put": {
-                "description": "Update user by ID or throw an error",
+                "description": "Update employee by ID or throw an error",
                 "produces": [
                     "application/json"
                 ],
                 "tags": [
-                    "Users"
+                    "Employees"
                 ],
-                "summary": "Update user by ID",
+                "summary": "Update employee by ID",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "user id",
+                        "description": "employee id",
                         "name": "id",
                         "in": "path",
                         "required": true
                     },
                     {
-                        "description": "user info",
+                        "description": "employee info",
                         "name": "request_body",
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.UserCreateRequest"
+                            "$ref": "#/definitions/dto.EmployeeCreateRequest"
                         }
                     }
                 ],
@@ -200,51 +247,6 @@ const docTemplate = `{
                         }
                     }
                 }
-            },
-            "delete": {
-                "description": "Delete user by ID or throw an error",
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "Users"
-                ],
-                "summary": "Delete user by ID",
-                "parameters": [
-                    {
-                        "type": "integer",
-                        "description": "user id",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "$ref": "#/definitions/controller.CommonResponse"
-                        }
-                    },
-                    "400": {
-                        "description": "Bad Request",
-                        "schema": {
-                            "$ref": "#/definitions/controller.CommonError"
-                        }
-                    },
-                    "404": {
-                        "description": "Not Found",
-                        "schema": {
-                            "$ref": "#/definitions/controller.CommonError"
-                        }
-                    },
-                    "500": {
-                        "description": "Internal Server Error",
-                        "schema": {
-                            "$ref": "#/definitions/controller.CommonError"
-                        }
-                    }
-                }
             }
         }
     },
@@ -265,7 +267,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.UserCreateRequest": {
+        "dto.EmployeeCreateRequest": {
             "type": "object",
             "properties": {
                 "age": {
@@ -279,7 +281,7 @@ const docTemplate = `{
                 }
             }
         },
-        "models.User": {
+        "models.Employee": {
             "type": "object",
             "properties": {
                 "age": {

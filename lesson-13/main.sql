@@ -33,9 +33,11 @@ CREATE TABLE orders
 
 CREATE DATABASE online_shop_db;
 
+DROP TABLE users;
+
 \c online_shop_db
 
-CREATE TABLE IF NOT EXISTS users
+CREATE TABLE IF NOT EXISTS employees
 (
     id    SERIAL,
     name  VARCHAR        NOT NULL,
@@ -44,4 +46,4 @@ CREATE TABLE IF NOT EXISTS users
     PRIMARY KEY (id)
 );
 
-DROP TABLE users;
+DROP TABLE employees;
