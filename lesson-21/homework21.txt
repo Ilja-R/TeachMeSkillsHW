@@ -1,0 +1,26 @@
+Homework: choose and implement one pattern
+Task:
+Choose any design pattern from the lesson topics (Singleton, Factory Method, Observer, Strategy, etc.) and implement it in Go.
+Requirements:
+• The code must be in a separate package or file.
+• Add comments explaining how the pattern works.
+• Provide an example of usage in main().
+Example formulation:
+1. Describe the pattern (what problem it solves).
+2. Implement the structure/interfaces.
+3. Show an example of it in action.
+Goal: reinforce understanding of design patterns and learn how to apply them in real code.
+
+Домашнее задание: выбрать и реализовать один паттерн
+Задание:
+Выберите любой шаблон проектирования из тем урока (Singleton, Factory Method, Observer, Strategy и
+др.) и реализуйте его на Go.
+Требования:
+• Код должен быть в отдельном пакете или файле.
+• Добавьте комментарии, объясняющие, как работает паттерн.
+• Приведите пример использования в main().
+Пример формулировки:
+1. Опишите паттерн (что решает).
+2. Реализуйте структуру/интерфейсы.
+3. Покажите пример работы.
+Цель: закрепить понимание шаблонов проектирования и научиться применять их в реальном коде.
