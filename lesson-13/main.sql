@@ -8,6 +8,8 @@ CREATE TABLE IF NOT EXISTS users
     PRIMARY KEY (id)
 );
 
+DROP TABLE users;
+
 CREATE TABLE cars
 (
     id      SERIAL,
@@ -29,4 +31,19 @@ CREATE TABLE orders
     FOREIGN KEY (user_id) REFERENCES users (id)
 );
 
+CREATE DATABASE online_shop_db;
+
 DROP TABLE users;
+
+\c online_shop_db
+
+CREATE TABLE IF NOT EXISTS employees
+(
+    id    SERIAL,
+    name  VARCHAR        NOT NULL,
+    email VARCHAR UNIQUE NOT NULL,
+    age   INT            NOT NULL,
+    PRIMARY KEY (id)
+);
+
+DROP TABLE employees;
