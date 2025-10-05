@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+package employee;
+option go_package = "employee/proto;proto";
+
+message Employee {
+  int32 id = 1;
+  string name = 2;
+  string email = 3;
+  int32 age = 4;
+}
+
+// Can add pagination here if needed later
+message GetAllEmployeesRequest {
+}
+
+message GetAllEmployeesResponse {
+  repeated Employee employees = 1;
+}
+
+message GetEmployeeRequest {
+  int32 id = 1;
+}
+
+message CreateEmployeeRequest {
+  string name = 1;
+  string email = 2;
+  int32 age = 3;
+}
+
+message UpdateEmployeeRequest {
+  int32 id = 1;
+  string name = 2;
+  string email = 3;
+  int32 age = 4;
+}
+
+message DeleteEmployeeRequest {
+  int32 id = 1;
+}
+
+message EmployeeResponse {
+  Employee employee = 1;
+}
+
+service EmployeeService {
+  rpc GetAllEmployees (GetAllEmployeesRequest) returns (GetAllEmployeesResponse);
+  rpc GetEmployeeByID (GetEmployeeRequest) returns (EmployeeResponse);
+  rpc CreateEmployee (CreateEmployeeRequest) returns (EmployeeResponse);
+  rpc UpdateEmployeeByID (UpdateEmployeeRequest) returns (EmployeeResponse);
+  rpc DeleteEmployeeByID (DeleteEmployeeRequest) returns (EmployeeResponse);
+}
