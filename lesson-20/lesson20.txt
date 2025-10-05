@@ -1,0 +1,11 @@
+Implement a gRPC server that:
+• provides CRUD operations for employees
+• stores data in a local slice
+Implement a gRPC client that:
+• calls all methods of the gRPC server
+
+Релизовать gRPC сервер который:
+• реализует CRUD по работникам
+• хранит данные в локальном слайсе
+Релизовать gRPC клиента который:
+вызывает все метода gRPC сервера
